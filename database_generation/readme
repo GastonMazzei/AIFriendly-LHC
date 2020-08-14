@@ -1,0 +1,17 @@
+MAPA DEL DIRECTORIO:
+
+   raw-->      (1) manu      (directorios con la data
+               (2) sequi     provista sobre colisiones)
+
+processors*-->(3) dataset_factory_manu.py
+              (4) dataset_factory_sequi.py
+
+processed-->  (5) manu_sin_cuadrinorm    (son directorios
+              (6) sequi_sin_cuadrinorm   con training, valid
+              (7) sequi_con_cuadrinorm   y testing datasets
+                                         en formato .csv en
+                                         distintas concentraciones) 
+
+* no son auto-generativos; hay que correrlos 3 veces cambiando
+  parametros adentro. En particular cambiar OFF a ON para 
+  incluir la feature cuadrimomento

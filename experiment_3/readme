@@ -1,0 +1,37 @@
+**********************************************************
+abrir readme.png y ver la explicacion grafica del proceso<
+**********************************************************
+
+WORKSPACE en donde se genera el dataset que va a ser
+usado para fabricar los resultados.
+La configuracion de este experimento es la charlada
+con Sequi en la cadena de mails: 
+los TRAIN, VALIDATE, TEST datasets tienen signal noise ratios:
+     50%      50%     50%
+     50%      2%     2%
+     2%      2%     2%
+y las neuronas van a ir de 1 a 30 y las epochs clavadas en 200.
+
+Para generarlo se puede:
+
+       A) correr "main.py" y esperar 
+          a que termine el loop de 1000
+          casos (1 dia) o cortarlo cuando 
+          quieras dado que en cada iteracion
+          genera y guarda los resultados.
+
+       B) generar el docker container con 
+          "docker-compose up -d" y el proceso
+          va a ser infinito en el sentido de 
+          que va a realizar 5 iteraciones, se
+          va a terminar, y va a tener auto-restart
+          y el motivo por el cual es asi es porque
+          no me funcionaba "backend.clear_session()"
+          entonces se quedaba sin memoria y usaba 
+          SWAP. 
+          El beneficio es que esta setteado para
+          usar 25% de la CPU con 4 cores; entonces
+          puede quedar de fondo e incluso configurarse
+          para que use menos. Ademas usa Tensorflow 
+          optimizado para Intel Cores.
+           

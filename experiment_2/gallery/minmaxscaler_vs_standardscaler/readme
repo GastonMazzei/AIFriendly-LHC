@@ -1,0 +1,9 @@
+Visualizar en el eje vertical los valores medios, maximos y minimos de Epochs 
+(o Neuronas) en los datasets en funcion de la selectividad del filtro (horizontal).
+
+Se separa por casos cuando se usa el scaler: MinMaxScaler y el StandardScaler
+
+Se entiende que la diferencia iba a ser notoria dado que era lo mas fuertemente
+correlacionado con el area bajo la curva ROC.
+
+CONCLUSION: se obtuvo lo esperado: un comportamiento distinto dependiendo del scaler

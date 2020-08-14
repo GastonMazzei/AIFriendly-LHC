@@ -1,0 +1,17 @@
+Correlacion ANTES y DESPUES de aplicar un filtro sobre la dataset de 
+colisiones de protones SIN masa-invariante ("data/A").
+
+Fue calculada entre el area bajo la curva ROC (AUC) y los hiper-params
+
+La selectividad del filtro era muy alta:
+.Training Accuracy +90%
+.Validation Accuracy +-5% que la Training Accuracy
+
+CONCLUSION: 
+
+La tendencia general es la misma; 
+SALVO por una relacion negativa entre
+la Area Bajo La Curva (AUC) Y la 
+fraccion de positivos en el training set.
+...
+!!esto ultimo tiene un directorio en la galeria!!

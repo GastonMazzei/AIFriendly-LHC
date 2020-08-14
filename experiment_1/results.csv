@@ -1,0 +1,1 @@
+epochs,batch,neurons,activation,signal_noise_ratio_train,signal_noise_ratio_val,signal_noise_ratio_test,X_train_len,X_val_len,X_test_len,auc,soft_auc,f1,test_acc,training_accuracy_mean,validation_accuracy_mean,training_accuracy_std,validation_accuracy_std,training_loss_mean,validation_loss_mean,training_loss_std,validation_loss_std,scaler

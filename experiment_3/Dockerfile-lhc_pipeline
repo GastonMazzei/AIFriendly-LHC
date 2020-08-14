@@ -1,0 +1,14 @@
+FROM intel/intel-optimized-tensorflow
+
+ENV APP workdir
+RUN mkdir $APP
+WORKDIR $APP
+
+
+COPY requirements.txt .
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
+COPY . .
+
+#RUN python main.py
+CMD [ "python3", "./main_docker.py" ]

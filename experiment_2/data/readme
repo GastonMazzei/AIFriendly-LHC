@@ -1,0 +1,122 @@
+MAPA DEL DIRECTORIO:
+
+  - (A)
+
+  - (B) 
+
+  - (C)
+
+  - (D)
+         
+----------------------detalles------------------
+***************************************************************************
+  1) folder "A" CONTIENE (los datos sobre los que se hizo el analisis de 
+                                                       hiper-parametros):
+***************************************************************************
+
+       -"sequi_sin_cuadrinorm.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones proton-proton SIN masa invariante
+           . 1250 MODELOS
+           . signal-noise-ratio era, independientemente:
+                TRAIN: 1-99
+                VAL:   1-99
+                TEST:  1-99
+
+***************************************************************************
+  2) folder "B" CONTIENE:
+***************************************************************************
+
+       -"sequi_sin_cuadrinorm_B.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones proton-proton SIN masa invariante
+           . 786 MODELOS
+           . signal-noise-ratio era, independientemente:
+                TRAIN: 50
+                VAL:   1,2,3,4,5,10,15,...,85,90,95
+                TEST:  1,2,3,4,5,10,15,...,85,90,95             
+
+       -"manu_lhco_B.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones del LHC formato LHCO por MadGraph
+           . 938 MODELOS
+           . signal-noise-ratio era, independientemente:
+                TRAIN: 50
+                VAL:   1,2,3,4,5,10,15,...,85,90,95
+                TEST:  1,2,3,4,5,10,15,...,85,90,95             
+
+***************************************************************************
+  3) folder "C" CONTIENE:
+***************************************************************************
+
+       -"sequi_sin_cuadrinorm_C.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones proton-proton SIN masa invariante
+           . 438 MODELOS
+           . signal-noise-ratio era, independientemente:
+                TRAIN: 2,50
+                VAL:   2,50
+                TEST:  2,50             
+
+       -"manu_lhco_C.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones del LHC formato LHCO por MadGraph
+           . 307 MODELOS
+           . signal-noise-ratio era, independientemente:
+                TRAIN: 2,50
+                VAL:   2,50
+                TEST:  2,50             
+
+*******************************************************************************
+  3) folder "D" CONTIENE LOS DATOS USADOS EN !!"RESULTADOS" Y "CONCLUSIONES"!!:
+*******************************************************************************
+
+       -"sequi_sin_cuadrinorm_D.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones proton-proton SIN masa invariante
+           . 315 MODELOS
+           . signal-noise-ratio era uno de las tres ternas:
+                TRAIN, VAL, TEST
+                 50    50    50
+                 50    2     2
+                 2     2     2
+
+       -"sequi_con_cuadrinorm_D.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones proton-proton CON masa invariante
+           . 275 MODELOS
+           . signal-noise-ratio era uno de las tres ternas:
+                TRAIN, VAL, TEST
+                 50    50    50
+                 50    2     2
+                 2     2     2
+
+       -"manu_lhco_C.csv:
+
+         DETALLES
+           . medidas de calidad en funcion de los hiperparametros
+             para colisiones del LHC formato LHCO por MadGraph
+           . 318 MODELOS
+           . signal-noise-ratio era uno de las tres ternas:
+                TRAIN, VAL, TEST
+                 50    50    50
+                 50    2     2
+                 2     2     2
+*******************************************************************************
+
+
+
