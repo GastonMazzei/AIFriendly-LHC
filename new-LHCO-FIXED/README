@@ -1,0 +1,40 @@
+TUTORIAL PARA GENERAR LOS "GRAFICOS DE RESULTADOS LHCO":
+.........................................................
+
+[_____DOS OPCIONES DE USO_______]
+
+-Opcion 1: fittear y abrir grafico
+
+  `bash new.sh A B C D E F G`
+
+-Opcion 2: fittear y generar grafico
+
+  `python3 testing-script.py A B C D E F G`
+
+[______FLAGS OBLIGATORIAS: INDICE_______]
+
+A -> "50" o "2" (es la cantidad de señal 
+                 en el training set)
+
+B -> "50" o "2" (es la cantidad de señal
+                 en el validation y testing)
+
+C -> 1,2,3...,40 (es el numero de neuronas por layer)
+
+D -> 50,...,1000 (es el numero de Epochs)
+
+E -> 2,..,32,...256 (es el Batch Size)
+
+F -> 0,"spherical", "cartesian"  (es el tipo de dataset)
+
+G -> 0 o 1      (es si es "deep" o no, i.e. 2 capas o 3)
+
+[______EJEMPLO__________]
+
+bash new.sh 50 50 32 128 32 0 0 
+
+>> Entrena una red bi-capa de 32 neuronas con 
+   señal de entrenamiento y validación en un 50%
+   durante 128 épocas y finalmente genera un gráfico 
+   en el directorio "results" el cual al finalizar 
+   abre con el Linux-default opener "eog"
