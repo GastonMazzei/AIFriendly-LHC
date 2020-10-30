@@ -13,7 +13,7 @@ from keras.losses import binary_crossentropy
 from keras.layers import Dense
 from keras.callbacks import EarlyStopping
 from keras.optimizers import SGD
-from sklearn.metrics import roc_curve
+from sklearn.metrics import roc_curve, roc_auc_score as ras
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from random import randrange
 from math import ceil
@@ -228,7 +228,7 @@ def simple_plotter(h, plot_name, TR):
   
   # Middle Plot: Testing ROC
   fpr, tpr, treshold = roc_curve(ytrue,ypred)
-  sns.lineplot(x=fpr,y=tpr,ax=ax[1],label='model')
+  sns.lineplot(x=fpr,y=tpr,ax=ax[1],label=f'model - AUC={round(ras(ytrue,ypred),2)}')
   sns.lineplot(x=fpr,y=fpr,ax=ax[1],label='null')
   ax[1].set_ylim(0,1)
   ax[1].set_xlim(0,1)
@@ -251,7 +251,7 @@ def simple_plotter(h, plot_name, TR):
   ax[2].set_xlim(0,1)
   ax[2].set_xlabel('Output Weights',fontsize=fs)
   #ax[2].set_ylabel('Density',fontsize=fs)
-  ax[2].set_title('output weights por categoria',fontsize=fs)
+  ax[2].set_title('output weights per category',fontsize=fs)
   ax[2].axvline(x=0.5,c='r',lw=1,ls='-')
 
   # AddSubTitle & Save!
