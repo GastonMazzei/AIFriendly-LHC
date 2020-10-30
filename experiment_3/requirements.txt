@@ -1,8 +1,0 @@
-scikit-learn
-#intel-tensorflow
-numpy
-pandas
-Keras
-Keras-Applications
-Keras-Preprocessing
-

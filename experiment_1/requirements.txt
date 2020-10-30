@@ -1,7 +1,0 @@
-scikit-learn
-numpy
-pandas
-Keras
-Keras-Applications
-Keras-Preprocessing
-
