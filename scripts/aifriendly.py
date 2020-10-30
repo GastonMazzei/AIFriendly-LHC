@@ -119,14 +119,15 @@ def main(**kwargs):
   # should be a class and they should be concatenated
   # e.g. probaChecker([...,...,]).buildBasics()
   data = buildbasics(probachecker([ptrain,pval]), name)
-  if name==0: name = 'full'
+  if name=='': name = 'full'
 
   #3) Build the network
   architecture = [Dense(neurons,activation='relu',
                   input_shape=(len(data['train'][0][0]),)),
                   Dense(neurons,activation='relu'),]
   if deep: 
-    architecture += [Dense(neurons,activation='relu')] * 1 
+    architecture += [Dense(neurons,activation='relu')] * 2
+    print('2 extra layers')
   architecture += [Dense(1,activation='sigmoid'),]
   model = Sequential(architecture)
   model.compile(optimizer=SGD(learning_rate=0.01),
@@ -147,7 +148,10 @@ def main(**kwargs):
   history['info'] = (neurons,batch,epochs)
   #6) Return all results
 
-  return history, f'hiddens-{deep+2}_type-{name}',(data['train'],batch)
+  if deep:
+    return history, f'hiddens-4_type-{name}',(data['train'],batch)
+  else:
+    return history, f'hiddens-2_type-{name}',(data['train'],batch)
   
 def len_error(A,B):
   mssg = f"""

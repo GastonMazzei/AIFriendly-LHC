@@ -49,7 +49,7 @@ def make_dataset(p_train, p_val, p_test, cuadrinorm = False,**kwargs):
         cols = tuple(C.columns)
         for x_ in range(len(cols)//11):
             try:
-                C = C.drop(columns=cols[x_*11])
+                C[cols[x_*11]] = x_ + 1
             except: pass
         # change np.non to zeros
         C = C.fillna(0)

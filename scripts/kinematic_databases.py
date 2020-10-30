@@ -111,7 +111,7 @@ def convert_to_4vect(df):
   return c
 
 def opener(nm):
-  d = pd.read_csv('database/'+nm,header=None)
+  d = pd.read_csv('database/'+nm,header=None, low_memory=False)
   return d
 
 def save_spherical(df,naim):
